@@ -1,0 +1,36 @@
+.perfil {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.perfil h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+.perfil p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #374151;
+}
+.perfil strong {
+  color: #111827;
+}
+.perfil .btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.perfil .btn:hover {
+  background: #15803d;
+}

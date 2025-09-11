@@ -1,0 +1,15 @@
+<div class="cart-row">
+  <img [src]="item.img || 'assets/images/placeholder.jpeg'" alt="{{ item.name }}" />
+  <div class="info">
+    <div class="title">{{ item.name }}</div>
+    <div class="price">COP {{ item.price | number }}</div>
+  </div>
+  <div class="qty">
+    <button (click)="dec()">-</button>
+    <span>{{ item.qty }}</span>
+    <button (click)="inc()">+</button>
+  </div>
+  <div class="actions">
+    <button (click)="remove.emit(item.id)">Eliminar</button>
+  </div>
+</div>

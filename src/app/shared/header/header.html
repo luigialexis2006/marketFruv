@@ -1,0 +1,21 @@
+<nav class="fruver-header">
+  <div class="brand"><a routerLink="/">FruverApp</a></div>
+
+  <ul class="nav-links">
+    <li><a routerLink="/">Inicio</a></li>
+    <li><a routerLink="/productos">Productos</a></li>
+    <li><a routerLink="/carrito">Carrito</a></li>
+    <li><a routerLink="/checkout">Checkout</a></li>
+    <li><a routerLink="/admin">Admin</a></li>
+    <li><a routerLink="/profile">Perfil</a></li>
+  </ul>
+
+  <div class="header-actions">
+    <a routerLink="/productos" class="btn">Comprar</a>
+    <a routerLink="/carrito" class="cart-btn" title="Ver carrito">
+      🛒
+      <span class="badge" *ngIf="cart.count() > 0">{{ cart.count() }}</span>
+    </a>
+  </div>
+</nav>
+

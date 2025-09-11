@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="thumb-wrapper"><img [src]="producto.img || 'assets/img/placeholder.svg'" alt="{{ producto.name }}" /></div>
+  <div class="body">
+    <h3>{{ producto.name }}</h3>
+    <p class="price">COP {{ producto.price | number }}</p>
+    <div class="meta"><small *ngIf="producto.stock !== undefined">Stock: {{ producto.stock }}</small></div>
+    <div class="actions">
+      <button (click)="onView()">Ver</button>
+      <button (click)="onAdd()">Agregar</button>
+    </div>
+  </div>
+</div>

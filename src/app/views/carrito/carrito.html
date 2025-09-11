@@ -1,0 +1,39 @@
+<section class="carrito-page">
+  <h2>Mi carrito</h2>
+
+  <div *ngIf="(items$ | async)?.length; else empty">
+    <div class="items-list">
+      <ng-container *ngFor="let it of (items$ | async)">
+        <app-cart-item
+          [item]="it"
+          (remove)="remove($event)"
+          (qtyChange)="changeQty(it.id,$event)">
+        </app-cart-item>
+      </ng-container>
+    </div>
+
+    <div class="cart-footer">
+      <div class="left">
+        <!-- placeholder para cupón: sin lógica por defecto -->
+        <input [(ngModel)]="couponCode" placeholder="Código de cupón (opcional)" />
+        <button class="btn small" (click)="couponCode=''; showCouponNotImplemented()">Aplicar</button>
+      </div>
+
+      <div class="summary">
+        <div class="line"><span>Subtotal:</span><strong>COP {{ (total$ | async) | number }}</strong></div>
+        <!-- si quieres más desgloses (envío, impuestos) agrégalos en el servicio -->
+        <div class="actions">
+          <button class="btn" (click)="clear()">Vaciar carrito</button>
+          <a routerLink="/checkout"><button class="btn primary">Ir a pagar</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #empty>
+    <div class="empty">
+      <p>Tu carrito está vacío.</p>
+      <a routerLink="/productos"><button class="btn primary">Ver productos</button></a>
+    </div>
+  </ng-template>
+</section>

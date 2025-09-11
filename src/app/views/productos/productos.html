@@ -1,0 +1,16 @@
+<section class="productos-page">
+  <div class="top">
+    <h2>Productos</h2>
+    <input [(ngModel)]="query" placeholder="Buscar producto..." />
+  </div>
+
+  <div class="grid">
+    <app-producto-card
+      *ngFor="let p of filtered()"
+      [producto]="p"
+      (add)="addToCart($event)"
+      (view)="goToDetail($event)">
+    </app-producto-card>
+  </div>
+</section>
+<router-outlet></router-outlet>

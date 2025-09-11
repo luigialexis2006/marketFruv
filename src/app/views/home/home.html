@@ -1,0 +1,12 @@
+<section class="home-banner">
+  <h1>Bienvenido a FruverApp</h1>
+  <p>Frutas y verduras frescas a un click.</p>
+  <a routerLink="/productos" class="cta">Ver productos</a>
+</section>
+
+<section class="home-destacados">
+  <h2>Destacados</h2>
+  <div class="grid">
+    <app-producto-card *ngFor="let p of destacados" [producto]="p" (add)="null" (view)="null"></app-producto-card>
+  </div>
+</section>
