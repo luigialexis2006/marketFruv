@@ -1,0 +1,15 @@
+# Angular build
+/dist
+/.angular
+
+# Node modules
+/node_modules
+
+# IDE configs
+.vscode
+.idea
+*.swp
+*.swo
+
+# Environment
+*.env
