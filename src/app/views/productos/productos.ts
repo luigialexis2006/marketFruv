@@ -19,7 +19,9 @@ export class ProductosComponent {
     { id: 1, name: 'Manzana Roja', price: 1200, img: 'assets/img/manzana.jpeg', stock: 50 },
     { id: 2, name: 'Banano', price: 800, img: 'assets/img/banano.jpeg', stock: 120 },
     { id: 3, name: 'Naranja', price: 900, img: 'assets/img/naranja.jpeg', stock: 80 },
-    { id: 4, name: 'Tomate', price: 1500, img: 'assets/img/tomate.jpeg', stock: 30 }
+    { id: 4, name: 'Tomate', price: 1500, img: 'assets/img/tomate.jpeg', stock: 30 },
+    { id: 5, name: 'Cebolla', price: 1000, img: 'assets/img/cebolla.jpeg', stock: 60 },
+    { id: 6, name: 'Sandia', price: 800, img: 'assets/img/sandia.jpeg', stock: 100 }
   ]);
 
   query = signal('');
