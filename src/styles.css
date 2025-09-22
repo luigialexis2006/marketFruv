@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.hero h1, 
+.hero h2 {
+  margin-top: 0;
+}

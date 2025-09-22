@@ -1,40 +1,107 @@
+
 .home-banner {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.8), rgba(39, 174, 96, 0.8)), url('/path/to/banner-image.jpg'); /* Fondo con gradiente y una imagen */
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 4rem 2rem;
   text-align: center;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-}
-.home-banner h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.home-banner p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-.home-banner .cta {
-  background: white;
-  color: #16a34a;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.2s;
-}
-.home-banner .cta:hover {
-  background: #f3f4f6;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin: 0.5%;
+  
 }
 
+.home-banner h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home-banner p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.home-banner .cta {
+  background-color: #3498db; /* Azul para el botón */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-banner .cta:hover {
+  background-color: #2980b9; /* Azul oscuro al pasar el mouse */
+  transform: scale(1.05); /* Animación de escala */
+}
+
+/* Sección Destacados */
 .home-destacados {
-  padding: 2rem;
+  padding: 50px 20px;
+  background-color: #edfafb;
 }
+
 .home-destacados h2 {
-  margin-bottom: 1rem;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
 }
+
 .home-destacados .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Layout adaptable */
+  gap: 20px;
+}
+
+.home-destacados .grid .producto-card {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-destacados .grid .producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Efecto de hover */
+}
+
+.home-destacados .grid .producto-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.home-destacados .grid .producto-card .producto-info {
+  text-align: center;
+}
+
+.home-destacados .grid .producto-card .producto-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home-destacados .grid .producto-card .producto-info p {
+  font-size: 16px;
+  color: #7f8c8d; /* Gris suave */
+  margin-bottom: 15px;
+}
+
+.home-destacados .grid .producto-card .producto-info .precio {
+  font-size: 18px;
+  color: #2ecc71;
+}
+
+.titulo-seccion{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home-banner{
+  background-color: #7f8c8d;
 }
